@@ -1,0 +1,51 @@
+{
+  "name": "codepace",
+  "version": "0.1.1",
+  "description": "Track and analyze your coding pace and productivity",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "codepace": "./dist/cli/index.js"
+  },
+  "keywords": [
+    "git",
+    "productivity",
+    "tracking",
+    "cli"
+  ],
+  "author": "huskyhoochu <dfg1499@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "node esbuild.config.mjs && tsc --emitDeclarationOnly --outDir dist",
+    "build:prod": "NODE_ENV=production node esbuild.config.mjs && tsc --emitDeclarationOnly --outDir dist",
+    "start": "node dist/cli/index.js",
+    "dev": "node esbuild.config.mjs --watch",
+    "test": "jest",
+    "format": "prettier --write --ignore-unknown",
+    "prepare": "husky",
+    "update-all": "pnpm update --latest && pnpm update --latest --dev && pnpm version patch"
+  },
+  "lint-staged": {
+    "*": "pnpm format"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^22.5.4",
+    "esbuild": "^0.23.1",
+    "husky": "^9.1.5",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "simple-git": "^3.26.0"
+  },
+  "packageManager": "pnpm@9.8.0+sha512.8e4c3550fb500e808dbc30bb0ce4dd1eb614e30b1c55245f211591ec2cdf9c611cabd34e1364b42f564bd54b3945ed0f49d61d1bbf2ec9bd74b866fcdc723276"
+}
