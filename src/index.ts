@@ -1,3 +1,5 @@
-import { Tracker } from './core/tracker.js';
+function hello() {
+  const a = '1';
 
-export { Tracker };
+  console.log(a);
+}
