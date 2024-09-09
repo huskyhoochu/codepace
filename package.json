@@ -1,11 +1,11 @@
 {
   "name": "codepace",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "description": "Track and analyze your coding pace and productivity",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
-    "codepace": "./dist/cli/index.js"
+    "codepace": "./dist/index.js"
   },
   "keywords": [
     "git",
