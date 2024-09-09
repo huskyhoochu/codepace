@@ -1,7 +1,7 @@
 import * as esbuild from 'esbuild';
 
 const config = {
-  entryPoints: ['src/index.ts', 'src/cli/index.ts'],
+  entryPoints: ['src/cli/index.ts'],
   bundle: true,
   platform: 'node',
   target: 'node18',

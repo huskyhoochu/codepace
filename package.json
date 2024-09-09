@@ -21,7 +21,7 @@
   "scripts": {
     "build": "node esbuild.config.mjs && tsc --emitDeclarationOnly --outDir dist",
     "build:prod": "NODE_ENV=production node esbuild.config.mjs && tsc --emitDeclarationOnly --outDir dist",
-    "start": "node dist/cli/index.js",
+    "start": "node dist/index.js",
     "dev": "node esbuild.config.mjs --watch",
     "test": "jest",
     "format": "prettier --write --ignore-unknown",
